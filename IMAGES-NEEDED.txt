@@ -1,0 +1,44 @@
+PRODUCT IMAGES NEEDED
+=====================
+
+Place images with these names in: public/images/products/
+
+Just use the base name - any extension works (.png, .jpg, .jpeg, .webp, .gif)!
+
+✓ red-t-shirt
+✓ blue-jeans
+✓ sneakers
+✓ hoodie
+✓ socks
+✓ baseball-cap
+✓ backpack
+✓ sunglasses
+✓ watch
+✓ leather-wallet
+✓ running-shoes
+✓ winter-jacket
+
+EXAMPLES:
+---------
+✓ red-t-shirt.png    ← Works!
+✓ red-t-shirt.jpg    ← Also works!
+✓ blue-jeans.PNG     ← Works too!
+✓ sneakers.jpeg      ← Yes!
+
+NOTES:
+------
+- Use PNG, JPG, JPEG, WebP, or GIF format
+- Don't worry about the extension - the app finds it automatically
+- Recommended size: 800x600px or 4:3 aspect ratio
+- Keep file size under 500KB each
+- Images will display in product catalog, cart, orders, etc.
+- Missing images will show a placeholder automatically
+
+QUICK TIP:
+----------
+You can search for free images on:
+- Unsplash.com
+- Pexels.com
+- Pixabay.com
+
+Download, rename to match the list above, and place in the folder!

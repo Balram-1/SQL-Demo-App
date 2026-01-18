@@ -1,0 +1,26 @@
+node_modules/
+npm-debug.log
+.env
+
+# Runtime/log files
+server.pid
+server.out.log
+server.err.log
+server.log
+
+# OS / editor files
+.DS_Store
+.vscode/
+Thumbs.db
+
+# DB file (if you prefer not to track local DB)
+# DB file (if you prefer not to track local DB)
+data/app.db
+
+# Local snapshots and runtime artifacts created during testing
+/*.html
+tracked.txt
+*.cookies.txt
+*_cookies.txt
+headers.txt
+cookies.txt

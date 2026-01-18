@@ -1,0 +1,84 @@
+========================================
+📧 EMAIL VERIFICATION SETUP GUIDE
+========================================
+
+To enable REAL email sending, follow these steps:
+
+FOR GMAIL (EASIEST):
+====================
+
+Step 1: Enable 2-Factor Authentication
+   • Go to: https://myaccount.google.com/security
+   • Turn on 2-Step Verification if not already enabled
+
+Step 2: Generate App Password
+   • Go to: https://myaccount.google.com/apppasswords
+   • Select app: "Mail"
+   • Select device: "Windows Computer"
+   • Click "Generate"
+   • Copy the 16-character password (example: abcd efgh ijkl mnop)
+
+Step 3: Update .env file
+   • Open the .env file in this folder
+   • Find these lines:
+     EMAIL_USER=your-email@gmail.com
+     EMAIL_PASS=your-app-password
+   
+   • Replace with YOUR details:
+     EMAIL_USER=youremail@gmail.com
+     EMAIL_PASS=abcdefghijklmnop
+   
+   • IMPORTANT: Remove all spaces from the app password!
+   • Also update EMAIL_FROM:
+     EMAIL_FROM=SQLi Demo Store <youremail@gmail.com>
+
+Step 4: Restart the server
+   • Stop the current server (Ctrl+C in terminal)
+   • Run: node server.js
+   • Try signing up with a real email address
+   • Check your inbox for the verification code!
+
+FOR OTHER EMAIL PROVIDERS:
+==========================
+
+OUTLOOK/HOTMAIL:
+   EMAIL_HOST=smtp-mail.outlook.com
+   EMAIL_PORT=587
+   EMAIL_USER=yourname@outlook.com
+   EMAIL_PASS=your-password
+
+YAHOO:
+   EMAIL_HOST=smtp.mail.yahoo.com
+   EMAIL_PORT=465
+   EMAIL_SECURE=true
+   EMAIL_USER=yourname@yahoo.com
+   EMAIL_PASS=your-app-password (generate at https://login.yahoo.com/account/security)
+
+CUSTOM SMTP:
+   Ask your email provider for:
+   - SMTP host
+   - SMTP port
+   - Username
+   - Password
+   - Whether to use SSL/TLS (set EMAIL_SECURE=true if yes)
+
+TROUBLESHOOTING:
+================
+
+Problem: Still showing "Email Not Configured"
+   → Check that EMAIL_USER is NOT "your-email@gmail.com"
+   → Make sure you saved the .env file
+   → Restart the server after changing .env
+
+Problem: "Invalid credentials" error
+   → Make sure you're using an App Password, not your regular password
+   → Remove all spaces from the app password
+   → Enable 2FA on your Google account first
+
+Problem: Email not received
+   → Check your spam/junk folder
+   → Wait 1-2 minutes (sometimes delayed)
+   → Try with a different email address
+   → Check server terminal for error messages
+
+========================================
